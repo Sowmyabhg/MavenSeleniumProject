@@ -15,7 +15,7 @@ public class Test1 {
 		   System.setProperty("webdriver.http.factory", "jdk-http-client");
 		   WebDriverManager.chromedriver().setup();
 	        WebDriver driver=new ChromeDriver();
-	       // driver.manage().window().maximize();
+	        driver.manage().window().maximize();
 	        driver.get("https://amazon.in");
 	        
 	        driver.quit();
