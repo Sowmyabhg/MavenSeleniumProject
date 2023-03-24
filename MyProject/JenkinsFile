@@ -13,27 +13,7 @@ pipeline {
                 git 'https://github.com/Sowmyabhg/MavenSeleniumProject.git'
             }
         }
-        stage('Build') {
-             steps
-            {
-                echo 'Build stage'
-                git 'https://github.com/jglick/simple-maven-project-with-tests.git'
-                  bat 'mvn -Dmaven.test.failure.ignore=true clean package'
-            }
-            
-        }
-        stage('Test') {
-            
-                    steps {
-                echo 'Test stage'
-            
-                     git 'https://github.com/SowmyaBilasanur/MavenBuild.git'
-                     
-                     bat 'mvn --version'
-                     bat 'mvn test'
-            
-        }
-        }
+      
         stage('Deploy to QA') {
         
                  steps{
